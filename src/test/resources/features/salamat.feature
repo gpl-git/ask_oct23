@@ -1,3 +1,3 @@
-Feature: salamat test
+Feature: Sample Website
 
-  Scenario: login
+  Scenario: User Name
