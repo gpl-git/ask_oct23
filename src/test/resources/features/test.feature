@@ -1,2 +1,2 @@
-Feature: Test
+gitFeature: Test
 
