@@ -1,3 +1,0 @@
-Feature: asdgfhg
-
-  Scenario: jhgkg
