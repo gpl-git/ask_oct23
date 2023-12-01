@@ -1,5 +1,5 @@
-Feature: asdgfhg
+Feature: Test Vitalii
 
-  Scenario: jhgkg
+  Scenario: git commitgit status
 
     Given I create a conflict with Galina
