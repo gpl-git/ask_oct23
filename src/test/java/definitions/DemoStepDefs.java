@@ -47,4 +47,10 @@ public class DemoStepDefs {
 
         }
     }
+
+    @When("I click the show Stopper button")
+    public void iClickTheShowStopperButton() {
+        getDriver().findElement(By.xpath("//div[@class='checkbox']//span[contains(text(), '\"Show-Stopper\"')]")).click();
+
+    }
 }
