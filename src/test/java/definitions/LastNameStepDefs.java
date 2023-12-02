@@ -80,16 +80,23 @@ public class LastNameStepDefs {
     }
 
 
-    @Then("error message <errMessage> is displayed VG")
-    public void errorMessageErMessageIsDisplayedVG(String errMessage) {
-        String actMessage = getDriver().findElement(By.id("mat-error-6")).getText();
-        assertThat(errMessage.equals(actMessage)).isTrue();
-    }
+//    @Then("error message <errMessage> is displayed VG")
+//    public void errorMessageErMessageIsDisplayedVG(String errMessage) {
+//        String actMessage = getDriver().findElement(By.id("mat-error-6")).getText();
+//        assertThat(errMessage.equals(actMessage)).isTrue();
+//    }
 
-    @Then("error message <errMessage> is displayed VG")
-    public void errorMessageErrMessageIsDisplayedVG(String errMessage) {
-        String actMessage = getDriver().findElement(By.id("mat-error-6")).getText();
-        assertThat(errMessage.equals(actMessage)).isTrue();
+  //  @Then("error message <errMessage> is displayed VG")
+  //  public void errorMessageErrMessageIsDisplayedVG(String errMessage) {
+   //     String actMessage = getDriver().findElement(By.xpath("//mat-error")).getText();
+  //      assertThat(errMessage.equals(actMessage)).isTrue();
+  //  }
+
+    @Then("LN error message {string} id displayed VG")
+    public void lnErrorMessageIdDisplayedVG(String expError) {
+        String actError = getDriver().findElement(By.xpath("//*[starts-with(@id, 'mat-error-')]")).getText();
+        System.out.println(actError);
+        assertThat(actError.equals(expError)).isTrue();
     }
 }
 

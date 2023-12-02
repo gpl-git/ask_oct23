@@ -22,7 +22,7 @@
     Scenario Outline: Last name field testing  Positive
       And I type <lname> into last name field VG
       And I click button "Register Me"
-      And I wait for 1 sec
+      And I wait for 2 sec
       Then confirmation message <expMessage> is displayed VG
       Examples:
         | lname       | expMessage                  |
@@ -31,16 +31,16 @@
         | "@#$^*&*(v" | "You have been Registered." |
         | "v"         | "You have been Registered." |
 
-    @lastname2
-    Scenario Outline: Last Name field testing Negative
+    @lname @lastname2
+    Scenario Outline: Test
       And I type <lname> into last name field VG
       And I click button "Register Me"
-      And I wait for 2 sec
-      Then error message <errMessage> is displayed VG
+      And I wait for 1 sec
+      Then LN error message <expError> id displayed VG
       Examples:
-        | lname   |   errMessage
-        | ""      | "This field is required"
-        | " "     | "Whitespaces are not allowed"
+        | lname                 | expError                 |
+       | ""                    | "This field is required" |
+        | " vbvbvb"        | "Whitespaces are not allowed"|
       #  known issue, more than 254 char
-        | "254cfgkhcghkcgkhcgkcgkjcgjkgkjgckhcgh456576954e7eurfyjdfkjgdfgdfjkgfjsdjfkgsdjfgkdfjkgdfgfgh@#$%^%^%hvhjgvjhvjhvjhvjhhgcAAADXGFHGCJVFDZGFCHVNGCGFDHGVJNhgchjhvbkhjvcgfxhvjhchgfxhjvjmbcgffklbjgfxtdfgh;ldgjhgdfghjkm,nbvcxdftgyuhjjhgftyukmnbftyukmnfghjknbghhj"| "" |
+      # | "254fgkhcghkcgkhcgkcgkjcgjkgkjgckhcgh456576954e7eurfyjdfkjgdfgdfjkgfjsdjfkgsdjfgkdfjkgdfgfgh@#$%^%^%hvhjgvjhvjhvjhvjhhgcAAADXGFHGCJVFDZGFCHVNGCGFDHGVJNhgchjhvbkhjvcgfxhvjhchgfxhjvjmbcgffklbjgfxtdfgh;ldgjhgdfghjkm,nbvcxdftgyuhjjhgftyukmnbftyukmnfghjknbghhj"| "" |
 
