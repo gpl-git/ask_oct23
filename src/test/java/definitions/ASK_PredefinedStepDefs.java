@@ -117,5 +117,17 @@ public class ASK_PredefinedStepDefs {
         getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'"+quizTitle+"')]/../../..//*[contains(text(),'Delete')]")).click();
         getDriver().findElement(By.xpath("//ac-modal-confirmation/..//*[contains(text(),'Delete')]")).click();
     }
+
+    @Then("I verify that the text {string} is displayed in the bottom of the page")
+    public void iVerifyThatTheTextIsDisplayedInTheBottomOfThePagemn(String expectedText) {
+        String actualText=getDriver().findElement(By.xpath("//div[@class='mat-expansion-panel-body']")).getText();
+        assertThat(actualText.contains(expectedText)).isTrue();
+    }
+
+    @Then("I verify that the {string} should be displayed beside the question")
+    public void iVerifyThatTheShouldBeDisplayedBesideTheQuestion(String star) {
+        String question=getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1*: new empty question')]")).getText();
+        assertThat(question.contains(star)).isTrue();
+    }
 }
 
