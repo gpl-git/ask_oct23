@@ -44,7 +44,6 @@ public class DemoStepDefs {
             Thread.sleep(1000);
             getDriver().findElement(By.xpath("//mat-panel-title[contains(text(),'Q1')]/../../..//*[@placeholder='Option "+i+"*']")).sendKeys("Option " + i);
 
-
         }
     }
 
