@@ -3,7 +3,7 @@ Feature: ASK Predefined Steps for Textual Question Text
 
   Background:
     Given I open "login" page
-    When I login as a teacher with credentials: "perminov45@adamcoloradofitness.com" and "ABC1234"
+    When I login as a teacher with credentials: "igolovina84@gasss.us" and "ABC123"
     And I click button "Sign In"
     And I wait for 1 sec
     Then I verify user role as "TEACHER"
